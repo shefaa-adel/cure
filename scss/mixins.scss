@@ -1,0 +1,30 @@
+// @import "variables";
+
+@mixin cure($fontSize){
+    // font-family: "Avenir Next";
+    font-size: $fontSize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color: #0747a6;
+    font-family: 'AvenirNext-b';
+    
+    
+}
+@mixin dot{
+    color: #00B0D9 ;
+    font-family: 'AvenirNext-b';
+}
+
+@mixin  mQ($arg...) {
+    @if length($arg)==1{
+        @media screen  and (max-width: nth($arg, 1 )){
+            @content;
+        }
+    }
+    @if length($arg)==2{
+        @media screen  and (max-width: nth($arg, 1 )) and (min-width: nth($arg, 2 )){
+            @content;
+        }
+    }
+}
