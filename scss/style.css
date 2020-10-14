@@ -985,6 +985,12 @@ h6 {
   }
 }
 
+@media screen and (max-width: 426px) {
+  .app__enter {
+    font-size: 10px;
+  }
+}
+
 .app__send {
   height: 100%;
   width: 27%;

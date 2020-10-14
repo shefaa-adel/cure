@@ -729,6 +729,9 @@ h6 {
     @include mQ(576px){
       font-size: 14px;
     }
+    @include mQ(426px){
+      font-size: 10px;
+    }
   }
   &__send {
     height: 100%;
