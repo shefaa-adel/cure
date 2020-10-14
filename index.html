@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="scss/style.css" />
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <script src="https://kit.fontawesome.com/3180fc41ff.js"></script> -->
+  <script src="https://kit.fontawesome.com/3180fc41ff.js"></script>
 </head>
 
 <body>
   <div class="">
     <!-- navbar -->
     <nav class="nav">
-      <p class="nav__icon col-lg-2 col-md-2 col-sm-12">Cure<span class="nav__dot">.</span></p>
+      <p class="nav__icon col-lg-2 col-md-2 col-sm-12">Cure<span class="nav__dot">.</span><i
+          class="fas fa-chevron-circle-down  nav__dropdown"></i></p>
       <ul class="nav__ul col-lg-6 col-md-6 ">
         <li class="nav__li">About</li>
         <li class="nav__li">Help</li>
@@ -42,19 +43,19 @@
     <br />
 
     <form class="header__search">
-      <input class="header__p1 header__first"  placeholder='&#xf002   Speciality' />
+      <input class="header__p1 header__first" placeholder='&#xf002   Speciality' />
 
       </input>
 
-      <input class="header__p"  placeholder='&#xf3c5   Location' />
+      <input class="header__p" placeholder='&#xf3c5   Location' />
 
       </input>
 
-      <input class="header__p"  placeholder='&#xf783   Date' />
+      <input class="header__p" placeholder='&#xf783   Date' />
 
       </input>
 
-      <input class="header__p1"  placeholder='&#xf70e   Insurence' />
+      <input class="header__p1" placeholder='&#xf70e   Insurence' />
 
       </input>
       <button class="header__find">Find Doctor</button>
@@ -116,31 +117,37 @@
   </div>
   <!-- end specialist -->
   <!-- apps -->
-  <div class="app">
-    <img class="app__img" src="images/Smartphone.svg" />
-    <div class="app__data">
-      <p class="app__header">
-        Get the <span class="app__cure">Cure</span><span class="app__dot">.</span> apps on All Platform
-      </p>
-      <ul class="app__ul">
-        <li class="app__li">Find nearby doctors in your network</li>
-        <li class="app__li">Browse doctor reviews by real patients</li>
-        <li class="app__li">Book doctor appointments with a tap</li>
-      </ul>
+  <div class="app__background">
+    <div class="container">
 
-      <p class="app__sendme">Send me a link to the app</p>
 
-      <form class="app__form">
-        <select name="opennum" class="app__opennum">
-          <option value="">+95</option>
-          <option value="">+02</option>
-          <option value="">+56</option>
-          <option value="">+24</option>
-        </select>
-        <input placeholder="Enter your phone number" class="app__enter" />
-        <input type="submit" value="Send link" class="app__send" />
-      </form>
-      <img class="app__store" src="images/20-202991_get-it-on-google-play-logo-png-vector.png" />
+      <div class="app">
+        <img class="app__img" src="images/Smartphone.svg" />
+        <div class="app__data">
+          <p class="app__header">
+            Get the <span class="app__cure">Cure</span><span class="app__dot">.</span> apps on All Platform
+          </p>
+          <ul class="app__ul">
+            <li class="app__li">Find nearby doctors in your network</li>
+            <li class="app__li">Browse doctor reviews by real patients</li>
+            <li class="app__li">Book doctor appointments with a tap</li>
+          </ul>
+
+          <p class="app__sendme">Send me a link to the app</p>
+
+          <form class="app__form">
+            <select name="opennum" class="app__opennum">
+              <option value="">+95</option>
+              <option value="">+02</option>
+              <option value="">+56</option>
+              <option value="">+24</option>
+            </select>
+            <input placeholder="Enter your phone number" class="app__enter" />
+            <input type="submit" value="Send link" class="app__send" />
+          </form>
+          <img class="app__store" src="images/20-202991_get-it-on-google-play-logo-png-vector.png" />
+        </div>
+      </div>
     </div>
   </div>
 
@@ -313,7 +320,7 @@
       <a class="footer__a" href="">Do not sale my personal information</a>
     </div>
   </footer>
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

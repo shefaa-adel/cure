@@ -34,7 +34,7 @@ h6 {
 // navbar
 .nav {
   display: flex;
-  height: 50px;
+  height: 70px;
   // line-height: 50px;
   margin-top: 34px;
   // position: fixed;
@@ -42,20 +42,28 @@ h6 {
   // z-index: 10;
   // width: 100%;
   // top: 0%;
-  @include mQ(426px){
+  @include mQ(768px) {
     // flex-direction: column;
-  }
-  &--sticky{
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 11;
     background-color: $card;
     margin-top: 0px;
-    height: 70px;
+    // height: 70px;
     padding: 10px;
     padding-top: 15px;
-   
+  }
+  &--sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    background-color: $card;
+    margin-top: 0px;
+    // height: 70px;
+    padding: 10px;
+    padding-top: 15px;
   }
 
   &__icon {
@@ -63,26 +71,67 @@ h6 {
     text-align: end;
     @include cure(33px);
     display: inline-block;
-    @include mQ(426px){
-      text-align: center;
+    @include mQ(768px) {
+      text-align: left;
+      width: 100% !important;
     }
   }
   &__dot {
     @include dot;
+  }
+  &__dropdown{
+    visibility: hidden;
+    color: $babyBlue;
+    @include mQ(768px){
+      
+      margin-left: 229px;
+     
+
+    }
+    @include mQ(767px){
+      visibility: inherit;
+      margin-left: 75%;
+    }
+    @include mQ(576px){
+     
+      margin-left: 60%;
+    }
+    @include mQ(375px){
+      
+      margin-left: 48%;
+
+    }
+   
+    // @include mQ(320px){
+      
+    //   margin-left: 160px;
+
+    // }
   }
   &__ul {
     display: flex;
     width: 45%;
     line-height: 50px;
     // height: 22px;
-    @include mQ(426px){
+    @include mQ(991px){
+      height: 45px;
+      //
+      
+    }
+    @include mQ(767px){
       width: 100%;
       flex-direction: column;
-      background-color: #ffffff;
+      background-color: $card;
       display: none;
       margin-bottom: 0px !important;
+      height: auto;
     }
+    @include mQ(426px) {
+     
+    }
+
   }
+ 
   &__li {
     text-decoration: none;
     list-style: none;
@@ -97,24 +146,37 @@ h6 {
     // line-height: 50px;
     // width: (100%/5);
     text-align: right;
-    margin-left: 30px;
+    // margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      background-color: $babyBlue;
+      color: #ffffff !important;
+      border-radius: 10px;
+    }
     @include mQ(1024px) {
       font-size: 14px;
-      
     }
-    @include mQ(992px){
-      margin-left: 28px;
-    }
-    @include mQ(769px,320px){
+    @include mQ(991px) {
+      padding-right: 5px;
+      padding-left: 5px;
+      font-size: 12px;
+        }
+    @include mQ(768px, 320px) {
       font-size: 11px;
-      margin-left: 19px;
+      // margin-left: 19px;
+      padding-left: 12px;
+      padding-right: 12px;
+      //
+     
     }
-    @include mQ(426px){
+    @include mQ(767px) {
       width: 100%;
       text-align: center;
       margin-left: 0px;
     }
-    
   }
   .first {
     color: #0747a6;
@@ -127,15 +189,16 @@ h6 {
     position: relative;
     text-align: center;
     @include mQ(1200px) {
-      text-align: center;
+      text-align: left;
     }
-    
-    @include mQ(769px,320px){
-     text-align: inherit;
+
+    @include mQ(768px, 320px) {
+      text-align: left;
     }
-    @include mQ(426px){
+    @include mQ(767px) {
+      text-align: inherit;
       display: none;
-      background-color: #ffffff;
+      background-color: $card;
       height: -webkit-fill-available;
       text-align: center;
     }
@@ -152,17 +215,18 @@ h6 {
     font-size: 16px;
     color: $babyBlue;
     font-weight: $bFont;
-    @include mQ(991px){
-      width: 40%;
-      font-size: 20px;
+    cursor: pointer;
+    @include mQ(991px) {
+      width: 30%;
+      font-size: 15px;
     }
-    @include mQ(769px,320px){
+    @include mQ(767px, 320px) {
       width: 34%;
-    font-size: 15px;
-    margin-left: 10px;
+      font-size: 15px;
+      margin-left: 10px;
     }
-    
-    @include mQ(426px){
+
+    @include mQ(426px) {
       width: 40%;
     }
   }
@@ -178,17 +242,19 @@ h6 {
     font-size: 16px;
     color: #ffffff;
     font-weight: $bFont;
-    @include mQ(991px){
-      width: 40%;
-      font-size: 20px;
+    cursor: pointer;
+    @include mQ(991px) {
+      width: 30%;
+      font-size: 15px;
     }
-    @include mQ(426px){
-      width: 40%;
-    }
-    @include mQ(769px,320px){
+   
+    @include mQ(767px, 320px) {
       width: 34%;
-    font-size: 15px;
-    margin-left: 10px;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    @include mQ(426px) {
+      width: 40%;
     }
   }
   &__flag {
@@ -203,12 +269,16 @@ h6 {
     border: 1px solid #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     position: absolute;
-    @include mQ(426px){
-      display: none;
+    @include mQ(991px) {
+     margin-left: 6px;
     }
-    @include mQ(769px,320px){
-      
-    margin-left: 10px;
+   
+    @include mQ(768px, 320px) {
+      margin-left: 10px;
+     
+    }
+    @include mQ(767px) {
+      display: none;
     }
   }
 }
@@ -220,6 +290,9 @@ h6 {
   text-align: center;
   position: relative;
   margin-top: 100px;
+  @include mQ(426px) {
+    margin-top: 90px;
+  }
   &__paragraph {
     width: 55%;
     color: $darkBlue;
@@ -230,12 +303,15 @@ h6 {
     @include mQ(1024px) {
       width: 69%;
     }
-    @include mQ(769px,320px){
+    @include mQ(768px, 320px) {
       width: 91%;
     }
-    @include mQ(426px){
-      width: 96%;
-      font-size: 32px;
+    @include mQ(576px){
+      font-size: 45px;
+    }
+    @include mQ(426px) {
+      width: 91%;
+      font-size: 30px;
     }
   }
   &__span {
@@ -255,24 +331,29 @@ h6 {
 
     z-index: 6;
     right: 7.5%;
-    
-    top: 230px;
+
+    top: 30%;
     box-shadow: 0 -12px 36px 0 rgba(214, 211, 211, 0.2);
     color: $grey;
     font-size: 20px;
-    @include mQ(426px){
+    @include mQ(991px){
+      border: 1px solid #e7e7e7;
+    }
+    @include mQ(767px) {
       flex-direction: column;
       height: inherit;
       border: 1px solid $grey;
       border-radius: 10px;
-      top: 100px;
-      
+      // top: 100px;
+    }
+    @include mQ(376px) {
+      // top: 150px;
     }
   }
   &__first {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    @include mQ(426px){
+    @include mQ(767px) {
       border-bottom-left-radius: 0px;
       border-top-right-radius: 10px;
     }
@@ -292,11 +373,15 @@ h6 {
     color: #51637f !important;
 
     border-right: 1px solid #e7e7e7;
-    @include mQ(769px,320px){
+    @include mQ(991px){
       font-size: 14px;
     }
-    @include mQ(426px){
+    @include mQ(768px, 320px) {
+      font-size: 14px;
+    }
+    @include mQ(767px) {
       width: 100%;
+      border-bottom: 1px solid #e7e7e7;
     }
   }
   &__p1 {
@@ -310,11 +395,16 @@ h6 {
     padding-left: 30px;
     border-right: 1px solid #e7e7e7;
     font-family: "FontAwesome";
-    @include mQ(769px,320px){
+    border-right: 1px solid #e7e7e7;
+    @include mQ(991px){
       font-size: 14px;
     }
-    @include mQ(426px){
+    @include mQ(768px, 320px) {
+      font-size: 14px;
+    }
+    @include mQ(767px) {
       width: 100%;
+      border-bottom: 1px solid #e7e7e7;
     }
   }
 
@@ -329,15 +419,22 @@ h6 {
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    @include mQ(769px,320px){
+    cursor: pointer;
+    border-right: 1px solid #e7e7e7;
+    @include mQ(991px){
+      font-size: 14px;
+    
+    }
+    @include mQ(768px, 320px) {
       font-size: 14px;
     }
-    @include mQ(426px){
+    @include mQ(767px) {
       width: 100%;
-    }
-    @include mQ(426px){
       border-bottom-left-radius: 10px;
       border-top-right-radius: 0px;
+    }
+    @include mQ(426px) {
+     
     }
   }
   &__img {
@@ -350,7 +447,7 @@ h6 {
     top: 213px;
     z-index: 0;
     margin-top: 80px;
-    @include mQ(426px){
+    @include mQ(426px) {
       height: 185px;
       margin-top: 118px;
     }
@@ -378,18 +475,24 @@ h6 {
     font-weight: bold;
     width: 50%;
     line-height: 70px;
-    @include mQ(992px){
-      
+    @include mQ(992px) {
       font-size: 30px;
     }
-    @include mQ(426px){
-     font-size: 17px;
-     line-height: inherit;
+    @include mQ(767px) {
+      font-size: 17px;
+      line-height: inherit;
+    }
+    @include mQ(376px) {
+      width: 70%;
+      font-size: 18px;
+    }
+    @include mQ(321px) {
+      font-size: 16px;
     }
   }
   &__cure {
     @include cure(36px);
-    @include mQ(426px){
+    @include mQ(426px) {
       @include cure(20px);
     }
   }
@@ -404,10 +507,21 @@ h6 {
     color: $babyBlue;
     font-weight: bold;
     line-height: 70px;
-    @include mQ(426px){
+    @include mQ(767px) {
+      font-size: 16px;
+      line-height: 54px;
+    }
+    @include mQ(426px) {
       font-size: 11px;
       line-height: 54px;
-     }
+    }
+    @include mQ(376px) {
+      width: 30%;
+      font-size: 12px;
+    }
+    @include mQ(321px) {
+      font-size: 9px;
+    }
   }
 
   &__card {
@@ -417,13 +531,15 @@ h6 {
     margin: 10px;
 
     width: 31%;
-    @include mQ(992px){
+    @include mQ(992px) {
       width: 47%;
-      
     }
-    @include mQ(426px){
-     width: 100%;
-     }
+    @include mQ(767px) {
+     width: 46%;
+    }
+    @include mQ(576px) {
+      width: 100%;
+    }
   }
   &__img {
     margin-top: 50px;
@@ -442,11 +558,17 @@ h6 {
   width: 100%;
   position: relative;
   height: 700px;
-  background-color: $card;
+  
   margin-top: 100px;
-  padding-left: 100px;
-  @include mQ(769px,320px){
-    padding-left: 30px;
+ 
+  @include mQ(768px, 320px) {
+    
+  }
+  @include mQ(576px) {
+    padding-left: 20px;
+  }
+  &__background{
+    background-color: $card;
   }
   &__img {
     height: 800px;
@@ -455,34 +577,56 @@ h6 {
     border-radius: 50px;
     top: 80px;
     right: 100px;
-    @include mQ(769px,320px){
-      top: 50px;
-    right: 46px;
-    width: 46%;
+    @include mQ(1024px){
+      right: -56px;
     }
-    @include mQ(426px){
+    @include mQ(768px, 320px) {
+      top: 50px;
+      right: 46px;
+      width: 46%;
+    }
+    @include mQ(576px) {
       display: none;
-     }
+    }
   }
   &__data {
     position: absolute;
     width: 40%;
     top: 100px;
-    @include mQ(426px){
+    @include mQ(576px) {
       width: 100%;
-     }
+    }
   }
   &__header {
     color: $darkBlue;
     font-size: 54px;
     // font-weight: bold;
     font-family: "AvenirNext-b";
-    @include mQ(769px,320px){
-     font-size: 41px;
+    @include mQ(1024px){
+      font-size: 43px;
+    }
+    @include mQ(768px, 320px) {
+      font-size: 41px;
+    }
+    @include mQ(767px) {
+      font-size: 33px;
+      
+    }
+    @include mQ(376px) {
+      font-size: 24px;
+    }
+    @include mQ(321px) {
+      font-size: 19px;
     }
   }
   &__cure {
     @include cure(41px);
+    @include mQ(376px) {
+      @include cure(32px);
+    }
+    @include mQ(321px) {
+      @include cure(21px);
+    }
   }
   &__dot {
     @include dot;
@@ -503,15 +647,29 @@ h6 {
       margin-left: -1em;
       font-size: 20px;
     }
-    @include mQ(769px,320px){
+    @include mQ(991px){
+      font-size:15px ;
+    }
+    @include mQ(768px, 320px) {
       font-size: 14px;
-     }
+    }
+    @include mQ(767px) {
+      font-size: 13px;
+     
+    }
+    @include mQ(321px) {
+      font-size: 13px;
+    }
   }
   &__sendme {
     font-size: 15px;
     margin-top: 60px;
     color: #586984;
     font-weight: bold;
+    @include mQ(767px) {
+     margin-top: 50px;
+    }
+   
   }
   &__form {
     width: 86%;
@@ -520,6 +678,18 @@ h6 {
     background-color: #ffffff;
     border: 1.5px solid #dfe5ee;
     display: flex;
+    @include mQ(1024px){
+     width: 100%;
+     font-size: 11px;
+    }
+    @include mQ(767px) {
+      font-size: 9px;
+     
+    }
+    @include mQ(576px){
+      font-size: 13px;
+      width: 90%;
+    }
   }
   &__opennum {
     height: 100%;
@@ -531,9 +701,15 @@ h6 {
     font-weight: 500;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    @include mQ(769px,320px){
+    @include mQ(768px, 320px) {
       width: 23%;
-     }
+    }
+    @include mQ(767px) {
+     padding-left: 0%;
+    }
+    @include mQ(576px){
+      padding-left: 5px;
+    }
   }
   &__enter {
     height: 100%;
@@ -543,9 +719,16 @@ h6 {
     color: #dfe5ee;
     padding-left: 5px;
     border-right: 1.5px solid #dfe5ee;
-    @include mQ(769px,320px){
+    @include mQ(768px, 320px) {
       font-size: 10px;
-     }
+    }
+    @include mQ(767px) {
+      font-size: 7px;
+     
+    }
+    @include mQ(576px){
+      font-size: 14px;
+    }
   }
   &__send {
     height: 100%;
@@ -557,13 +740,30 @@ h6 {
     font-weight: bold;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    @include mQ(769px,320px){
-      font-size: 12px;
+    @include mQ(1024px){
+      font-size: 14px;
      }
+    @include mQ(768px, 320px) {
+      font-size: 12px;
+    }
+    @include mQ(767px) {
+      font-size: 9px;
+     
+    }
+    @include mQ(576px){
+      font-size: 15px;
+    }
   }
   &__store {
     width: 300px;
     height: 75px;
+    @include mQ(767px) {
+     width: 210px;
+     height: 70px;
+    }
+    @include mQ(321px) {
+      width: 274px;
+    }
   }
 }
 
@@ -575,15 +775,18 @@ h6 {
   margin-top: 250px;
   justify-content: center;
   text-align: center;
+  @include mQ(426px) {
+    margin-top: 80px;
+  }
   &__header {
     font-size: 54px;
     font-family: "AvenirNext-b";
     color: $darkBlue;
     font-weight: 900;
     width: 100%;
-    @include mQ(426px){
+    @include mQ(426px) {
       font-size: 40px;
-     }
+    }
   }
   &__headdata {
     color: $grey;
@@ -591,9 +794,9 @@ h6 {
     font-weight: bold;
     // margin-top: 20px;
     width: 100%;
-    @include mQ(426px){
+    @include mQ(426px) {
       font-size: 15px;
-     }
+    }
   }
   &__card {
     border-radius: 15px;
@@ -601,15 +804,18 @@ h6 {
     margin: 70px;
     position: relative;
     width: 20%;
-    @include mQ(1024px) {
+    @include mQ(1200px) {
       width: 18%;
     }
-    @include mQ(992px){
+    @include mQ(1024px){
+     margin: 52px;
+     }
+    @include mQ(991px) {
       width: 29%;
     }
-    @include mQ(426px){
+    @include mQ(576px) {
       width: 100%;
-     }
+    }
   }
   &__num {
     right: -15px;
@@ -620,9 +826,25 @@ h6 {
     font-size: 100px;
     color: #ea6957;
     bottom: 30px;
-    @include mQ(426px){
-      right: 7px;
+    @include mQ(1024px){
+     right: -80px;
      }
+     @include mQ(991px){
+      right: -20px;
+      }
+      @include mQ(767px) {
+        right: -60px;
+      }
+      @include mQ(576px){
+       right: 20px;
+      }
+
+    @include mQ(426px) {
+      right: 7px;
+    }
+    @include mQ(321px) {
+      right: -31px;
+    }
   }
   &__img {
     margin-top: 50px;
@@ -646,9 +868,13 @@ h6 {
     margin-top: 60px;
     margin-bottom: 120px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    @include mQ(991px){
+    cursor: pointer;
+    @include mQ(991px) {
       width: 80%;
       font-size: 20px;
+    }
+    @include mQ(426px) {
+      width: 75%;
     }
   }
 }
@@ -666,14 +892,14 @@ h6 {
     position: absolute;
     top: 40px;
     left: 30px;
-    @include mQ(769px,320px){
+    @include mQ(768px, 320px) {
       top: 20px;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(576px) {
       width: 100%;
       height: 30%;
       left: 0px;
-     }
+    }
   }
   &__data {
     width: 50%;
@@ -683,17 +909,17 @@ h6 {
     padding: 50px;
     padding-left: 100px;
     text-align: left;
-    @include mQ(769px,320px){
-     padding-left: 50px;
-     margin-top: 30px;
-     }
-     @include mQ(426px){
+    @include mQ(768px, 320px) {
+      padding-left: 50px;
+      margin-top: 30px;
+    }
+    @include mQ(576px) {
       width: 100%;
       height: 70%;
       top: 25%;
       text-align: center;
       margin-top: 0px;
-     }
+    }
   }
   &__header {
     margin-top: 20px;
@@ -703,15 +929,22 @@ h6 {
     font-weight: bold;
     // margin-left: 30px;
     width: 90%;
-    @include mQ(1024px){
+    @include mQ(1200px) {
+      font-size: 44px;
+    }
+    @include mQ(1024px) {
       font-size: 40px;
-     }
-     @include mQ(769px,320px){
+    }
+    @include mQ(991px) {
+      font-size:35px;
+    }
+
+    @include mQ(768px, 320px) {
       font-size: 26px;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(576px) {
       font-size: 21px;
-     }
+    }
   }
   &__headerdata {
     margin-top: 30px;
@@ -720,12 +953,15 @@ h6 {
     color: $grey;
 
     width: 90%;
-    @include mQ(769px,320px){
+    @include mQ(991px) {
+      font-size: 15px;
+    }
+    @include mQ(768px, 320px) {
       font-size: 18px;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(426px) {
       font-size: 14px;
-     }
+    }
   }
   &__btn {
     width: 45%;
@@ -740,12 +976,21 @@ h6 {
     margin-top: 20px;
     // margin-bottom: 120px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    @include mQ(1024px){
+    cursor: pointer;
+    @include mQ(1024px) {
       font-size: 14px;
-     }
-     @include mQ(769px,320px){
+    }
+    @include mQ(768px, 320px) {
       width: 60%;
-     }
+    }
+    @include mQ(426px) {
+      font-size: 17px;
+      width: 75%;
+    }
+    @include mQ(321px) {
+      width: 90%;
+      font-size: 15px;
+    }
   }
 }
 // resources
@@ -755,6 +1000,9 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include mQ(426px) {
+    margin-top: 80px;
+  }
   &__header {
     padding-left: 70px;
     margin-top: 20px;
@@ -763,19 +1011,18 @@ h6 {
     font-family: "AvenirNext-b";
     // margin-left: 30px;
     width: 70%;
-    @include mQ(1024px){
-      font-size: 45px;
-     }
-     @include mQ(991px){
-     
+    @include mQ(1024px) {
+      font-size: 37px;
+    }
+    @include mQ(991px) {
       font-size: 33px;
     }
-    @include mQ(426px){
+    @include mQ(576px) {
       font-size: 26px;
       padding-left: 0px;
       width: 100%;
-    text-align: center;
-     }
+      text-align: center;
+    }
   }
   &__btn {
     width: 23%;
@@ -790,14 +1037,23 @@ h6 {
     margin-top: 110px;
     // margin-bottom: 120px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    @include mQ(991px){
+    cursor: pointer;
+    @include mQ(1024px){
+      font-size: 15px;
+     }
+    @include mQ(991px) {
       margin-top: 60px;
       font-size: 13px;
     }
-    @include mQ(426px){
-      font-size: 14px;
-      width: 60%;
-     }
+    @include mQ(576px) {
+      font-size: 16px;
+      width: 63%;
+      margin-top: 20px;
+    }
+    @include mQ(321px) {
+      width: 90%;
+      font-size: 15px;
+    }
   }
   &__card {
     // border-radius: 15px;
@@ -806,16 +1062,18 @@ h6 {
     position: relative;
     width: 15%;
     text-align: center;
-    @include mQ(1024px){
+    @include mQ(1200px) {
       width: 14%;
-     }
-     @include mQ(991px){
-      width: 27%;
-      
     }
-    @include mQ(426px){
-     width: 100%;
+    @include mQ(1024px){
+      margin: 37px;
      }
+    @include mQ(991px) {
+      width: 27%;
+    }
+    @include mQ(576px) {
+      width: 63%;
+    }
   }
   &__div {
     border-radius: 50%;
@@ -825,10 +1083,19 @@ h6 {
     text-align: center;
     position: relative;
     display: inline-block;
-    @include mQ(426px){
+    @include mQ(1024px){
+      width: 120%;
+     }
+     @include mQ(991px){
+      width: 100%;
+     }
+    @include mQ(426px) {
       width: 85%;
       height: 85%;
-     }
+    }
+    @include mQ(321px) {
+      width: 100%;
+    }
   }
   &__img {
     margin: 0;
@@ -838,9 +1105,15 @@ h6 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
-    @include mQ(426px){
-      width: 45%;
+    @include mQ(1024px){
+     width: 60px;
      }
+     @include mQ(991px){
+      width:auto;
+     }
+    @include mQ(426px) {
+      width: 60%;
+    }
   }
   &__data {
     margin-top: 15px;
@@ -858,9 +1131,11 @@ h6 {
   right: 50px;
 
   display: flex;
-  @include mQ(426px){
+  @include mQ(576px) {
     flex-direction: column;
-   }
+    margin-bottom: 0px;
+    right: 0px;
+  }
 
   &__img {
     width: 50%;
@@ -868,11 +1143,10 @@ h6 {
     position: absolute;
 
     left: 30px;
-    @include mQ(426px){
-      
-      width: 100%;
+    @include mQ(576px) {
+      width: 80%;
       height: 30%;
-     }
+    }
   }
   &__data {
     width: 50%;
@@ -882,13 +1156,14 @@ h6 {
     padding: 50px;
     padding-left: 100px;
     text-align: left;
-    @include mQ(426px){
+    @include mQ(576px) {
       // font-size: 14px;
       width: 100%;
       height: 70%;
       top: 30%;
       text-align: center;
-     }
+      padding-left: 50px;
+    }
   }
   &__header {
     margin-top: 20px;
@@ -896,17 +1171,21 @@ h6 {
     color: $darkBlue;
     font-family: "AvenirNext-b";
     // margin-left: 30px;
-    @include mQ(991px){
-     
-      font-size: 41px;
+    @include mQ(1200px) {
+      font-size: 44px;
     }
-    @include mQ(769px,320px){
+    @include mQ(991px) {
       font-size: 35px;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(768px, 320px) {
+      font-size: 35px;
+    }
+    @include mQ(426px) {
       font-size: 29px;
-      
-     }
+    }
+    @include mQ(321px) {
+      margin-top: 0px;
+    }
   }
   &__headerdata {
     margin-top: 30px;
@@ -915,13 +1194,23 @@ h6 {
     color: $grey;
 
     width: 90%;
-    @include mQ(769px,320px){
+    @include mQ(991px){
+     font-size: 15px;
+     }
+    @include mQ(768px, 320px) {
       font-size: 18px;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(767px) {
       font-size: 14px;
-      
-     }
+     
+    }
+    @include mQ(426px) {
+      font-size: 14px;
+      display: inline-block;
+    }
+    @include mQ(321px) {
+      margin-top: 0px;
+    }
   }
   &__btn {
     width: 45%;
@@ -936,21 +1225,25 @@ h6 {
     margin-top: 50px;
     // margin-bottom: 120px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    @include mQ(1024px){
+    cursor: pointer;
+    @include mQ(1024px) {
       margin-top: 15px;
-     }
-     @include mQ(991px){
-      
+    }
+    @include mQ(991px) {
       font-size: 14px;
     }
-    @include mQ(769px,320px){
+    @include mQ(768px, 320px) {
       width: 60%;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(767px) {
+      font-size: 11px;
+     
+    }
+    @include mQ(426px) {
       height: 45px;
-      width: 90%;
-      
-     }
+      width: 75%;
+      font-size: 16px;
+    }
   }
 }
 // footer
@@ -960,33 +1253,41 @@ h6 {
   background-color: #00234e;
   display: flex;
   flex-wrap: wrap;
-  
 
   padding: 250px 40px 80px 80px;
-  @include mQ(1024px){
+  @include mQ(1024px) {
     padding: 250px 40px 40px 40px;
-    height: 690px;
-   }
-   @include mQ(991px){
-    height: 700px;
+    height: 704px;
   }
-  @include mQ(769px,320px){
+  @include mQ(991px) {
     height: 800px;
-   }
-   @include mQ(426px){
-   padding-top: 150px;
-   height: 460px;
-    
-   }
+    padding: 250px 10px 10px 30px;
+
+  }
+  @include mQ(768px, 320px) {
+    height: 800px;
+  }
+  @include mQ(767px) {
+    padding-top: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: inherit;
+  }
+  
+  @include mQ(576px) {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right:20px;
+   
+  }
   &__div1 {
     width: 20%;
-    @include mQ(1024px){
+    @include mQ(1024px) {
       width: 11%;
-     }
-     @include mQ(426px){
+    }
+    @include mQ(767px) {
       width: 100%;
-      
-     }
+    }
   }
   &__cure {
     @include cure(30px);
@@ -1018,9 +1319,12 @@ h6 {
   }
   &__div {
     margin-left: 60px;
-    @include mQ(426px){
+    @include mQ(1200px) {
+      margin-left: 28px;
+    }
+    @include mQ(767px) {
       display: none;
-     }
+    }
   }
   &__header {
     font-size: 15px;
@@ -1034,8 +1338,7 @@ h6 {
     padding: 0px !important;
     font-size: 14px;
     line-height: 30px;
-    @include mQ(991px){
-      
+    @include mQ(991px) {
       font-size: 13px;
     }
   }
@@ -1046,9 +1349,12 @@ h6 {
     @include mQ(1200px) {
       width: 140px;
     }
-    @include mQ(769px,320px){
-      display:none;
+    @include mQ(991px){
+      margin-left: 20px;
      }
+    @include mQ(768px, 320px) {
+      display: none;
+    }
   }
   &__d2l {
     margin-top: 32px;
@@ -1060,6 +1366,10 @@ h6 {
     width: 130px;
     height: 90px;
     margin-top: 10px;
+    @include mQ(991px){
+     height: 80px;
+     width:110px ;
+     }
   }
   &__a {
     font-size: 11px;
