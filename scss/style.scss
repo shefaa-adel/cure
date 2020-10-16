@@ -23,14 +23,7 @@ body {
   // font-family: 'AvenirNext-b';
   font-weight: bold;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "AvenirNext-b";
-}
+
 // navbar
 .nav {
   display: flex;
@@ -135,7 +128,7 @@ h6 {
   &__li {
     text-decoration: none;
     list-style: none;
-    color: #161c51;
+    color: #161c51 !important;
     // font-family: "Avenir Next";
     font-size: 16px;
     // font-weight: $bFont;
@@ -176,6 +169,7 @@ h6 {
       width: 100%;
       text-align: center;
       margin-left: 0px;
+      font-size: 15px;
     }
   }
   .first {
@@ -323,7 +317,7 @@ h6 {
     background-color: #ffffff;
     height: 60px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
 
     border-radius: 10px;
 
@@ -338,6 +332,7 @@ h6 {
     font-size: 20px;
     @include mQ(991px){
       border: 1px solid #e7e7e7;
+      font-size: 18px;
     }
     @include mQ(767px) {
       flex-direction: column;
@@ -345,68 +340,107 @@ h6 {
       border: 1px solid $grey;
       border-radius: 10px;
       // top: 100px;
+      
     }
     @include mQ(376px) {
       // top: 150px;
     }
   }
+  &__sfield1{
+    position: relative;
+    width: (2 * (100%/8));
+    
+    &:not(:last-of-type) {
+      border-right: 1px solid #e7e7e7;
+  }
+  @include mQ(767px) {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 15px;
+  }
+  }
+  &__sfield{
+    position: relative;
+    width: (100%/6);
+   
+    &:not(:last-of-type) {
+      border-right: 1px solid #e7e7e7;
+  }
+  @include mQ(767px) {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 15px;
+  }
+  }
+  &__i{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    // font-size: 20px;
+    color:  #51637f ;
+    margin-left: 10px;
+    @include mQ(991px){
+      margin-left: 5px;
+    }
+    @include mQ(767px){
+      margin-left: 15px;
+    }
+    
+  }
+  &__input{
+    display: block;
+    height: 60px;
+    width: 100%;
+    background: none;
+    outline: none !important;
+    border: none;
+    border-top: 4px solid rgba(7, 71, 166, 0);
+    border-bottom:4px solid rgba(7, 71, 166, 0);
+    position: relative;
+    z-index: 1;
+    padding: 0 15px 0 45px;
+    transition: border-color 0.2s ease;
+    font-size: 16px;
+    color:  #51637f ;
+    padding-left: 50px;
+
+    
+    &:focus{
+      border-color: rgba(7, 71, 166, 0.4);
+    }
+    &::placeholder{
+      color:  #51637f ;
+      font-size: 14px;
+     
+      
+    }
+    @include mQ(991px){
+      font-size: 10px;
+      padding-left: 38px;
+    }
+    @include mQ(767px){
+      font-size: 14px;
+      padding-left: 50px;
+    }
+}
+
+
   &__first {
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius:10px;
+    border-left: 4px solid rgba(7, 71, 166, 0);
     @include mQ(767px) {
       border-bottom-left-radius: 0px;
       border-top-right-radius: 10px;
+      border-right: 4px solid rgba(7, 71, 166, 0);
     }
   }
 
-  &__p {
-    width: (100%/6);
-
-    height: 100%;
-
-    padding: 10px;
-    text-align: left;
-    padding-left: 30px;
-    border: none;
-    font-family: "FontAwesome";
-    font-size: 18px;
-    color: #51637f !important;
-
-    border-right: 1px solid #e7e7e7;
-    @include mQ(991px){
-      font-size: 14px;
-    }
-    @include mQ(768px, 320px) {
-      font-size: 14px;
-    }
-    @include mQ(767px) {
-      width: 100%;
-      border-bottom: 1px solid #e7e7e7;
-    }
-  }
-  &__p1 {
-    color: #51637f !important;
-    width: (2 * (100%/8));
-    height: 100%;
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    text-align: left;
-    padding-left: 30px;
-    border-right: 1px solid #e7e7e7;
-    font-family: "FontAwesome";
-    border-right: 1px solid #e7e7e7;
-    @include mQ(991px){
-      font-size: 14px;
-    }
-    @include mQ(768px, 320px) {
-      font-size: 14px;
-    }
-    @include mQ(767px) {
-      width: 100%;
-      border-bottom: 1px solid #e7e7e7;
-    }
-  }
+  
+    
+  
+   
 
   &__find {
     width: ((100%/6)+1);
@@ -419,8 +453,15 @@ h6 {
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    outline: none;
     cursor: pointer;
     border-right: 1px solid #e7e7e7;
+    &:hover{
+      background-color: #2e73db;
+    }
+    &:active,&:focus{
+      background-color: #134186;
+    }
     @include mQ(991px){
       font-size: 14px;
     
@@ -504,9 +545,10 @@ h6 {
     display: inline-block;
     width: 50%;
     font-size: 18px;
-    color: $babyBlue;
+    color: $babyBlue !important;
     font-weight: bold;
     line-height: 70px;
+    text-decoration: none;
     @include mQ(767px) {
       font-size: 16px;
       line-height: 54px;
@@ -758,14 +800,16 @@ h6 {
     }
   }
   &__store {
-    width: 300px;
-    height: 75px;
+    width: 130px;
+    height: 40px;
+    margin-top: 15px;
     @include mQ(767px) {
-     width: 210px;
-     height: 70px;
+     width: 100px;
+     height: 30px;
     }
     @include mQ(321px) {
-      width: 274px;
+      width: 50%;
+      height: 40px;
     }
   }
 }
@@ -830,7 +874,7 @@ h6 {
     color: #ea6957;
     bottom: 30px;
     @include mQ(1024px){
-     right: -80px;
+     right: -50px;
      }
      @include mQ(991px){
       right: -20px;
@@ -889,6 +933,9 @@ h6 {
   height: 700px;
   background-color: $card;
   position: relative;
+  @include mQ(768px, 320px) {
+    height: 530px;
+  }
   &__img {
     width: 50%;
     height: 100%;
@@ -897,11 +944,12 @@ h6 {
     left: 30px;
     @include mQ(768px, 320px) {
       top: 20px;
-    }
-    @include mQ(576px) {
       width: 100%;
       height: 30%;
       left: 0px;
+    }
+    @include mQ(576px) {
+     
     }
   }
   &__data {
@@ -914,14 +962,15 @@ h6 {
     text-align: left;
     @include mQ(768px, 320px) {
       padding-left: 50px;
-      margin-top: 30px;
-    }
-    @include mQ(576px) {
+      // margin-top: 30px;
       width: 100%;
       height: 70%;
       top: 25%;
       text-align: center;
       margin-top: 0px;
+    }
+    @include mQ(576px) {
+      
     }
   }
   &__header {
@@ -931,7 +980,7 @@ h6 {
     color: $darkBlue;
     font-weight: bold;
     // margin-left: 30px;
-    width: 90%;
+    width: 100%;
     @include mQ(1200px) {
       font-size: 44px;
     }
@@ -955,7 +1004,7 @@ h6 {
     font-weight: normal;
     color: $grey;
 
-    width: 90%;
+    width: 100%;
     @include mQ(991px) {
       font-size: 15px;
     }
@@ -1301,7 +1350,7 @@ h6 {
   }
   &__ul1 {
     list-style: none;
-    color: $grey;
+    color: $grey ;
     margin-left: 0px !important;
     padding: 0px !important;
     font-size: 11px;
@@ -1316,6 +1365,7 @@ h6 {
   &__copyw {
     margin-top: 20px;
     margin-left: 10px;
+    color: $grey;
   }
   &__cwi {
     font-size: 10px;
@@ -1326,7 +1376,7 @@ h6 {
       margin-left: 28px;
     }
     @include mQ(767px) {
-      display: none;
+      width: 33%;
     }
   }
   &__header {
@@ -1336,7 +1386,7 @@ h6 {
   }
   &__ul {
     list-style: none;
-    color: $grey;
+    color: $grey ;
     margin-left: 0px !important;
     padding: 0px !important;
     font-size: 14px;
@@ -1344,6 +1394,9 @@ h6 {
     @include mQ(991px) {
       font-size: 13px;
     }
+  }
+  &__li{
+    color: $grey;
   }
   &__div2 {
     width: 150px;
@@ -1356,7 +1409,10 @@ h6 {
       margin-left: 20px;
      }
     @include mQ(768px, 320px) {
-      display: none;
+     
+    }
+    @include mQ(767px){
+      width: 100%;
     }
   }
   &__d2l {
@@ -1367,11 +1423,12 @@ h6 {
   }
   &__img {
     width: 130px;
-    height: 90px;
+    height: 40px;
     margin-top: 10px;
+    display: block;
     @include mQ(991px){
-     height: 80px;
-     width:110px ;
+     height: 30px;
+     width:100px ;
      }
   }
   &__a {

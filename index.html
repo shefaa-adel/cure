@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Cure.</title>
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="scss/style.css" />
@@ -20,10 +20,18 @@
       <p class="nav__icon col-lg-2 col-md-2 col-sm-12">Cure<span class="nav__dot">.</span><i
           class="fas fa-chevron-circle-down  nav__dropdown"></i></p>
       <ul class="nav__ul col-lg-6 col-md-6 ">
-        <li class="nav__li">About</li>
-        <li class="nav__li">Help</li>
-        <li class="nav__li first">Join cure.</li>
-        <li class="nav__li last"><a>List your practice on cure.</a></li>
+        <a href="">
+          <li class="nav__li">About</li>
+        </a>
+        <a href="">
+          <li class="nav__li">Help</li>
+        </a>
+        <a href="">
+          <li class="nav__li first">Join cure.</li>
+        </a>
+        <a href="">
+          <li class="nav__li last"><a>List your practice on cure.</a></li>
+        </a>
       </ul>
       <div class="col-lg-4 col-md-4  nav__end">
         <button class="nav__signin">Sign in</button>
@@ -42,25 +50,34 @@
     </p>
     <br />
 
-    <form class="header__search">
-      <input class="header__p1 header__first" placeholder='&#xf002   Speciality' />
+    <section class="header__search">
+      <div class="header__sfield1 ">
+        <i class="fa fa-search header__i" aria-hidden="true"></i>
+        <input class="  header__input header__first" placeholder='Speciality' />
 
-      </input>
+        </input>
+      </div>
+      <div class="header__sfield ">
+        <i class="fa fa-map-marker header__i" aria-hidden="true"></i>
+        <input class="  header__input" placeholder='Location' />
 
-      <input class="header__p" placeholder='&#xf3c5   Location' />
+        </input>
+      </div>
+      <div class="header__sfield ">
+        <i class="fa fa-calendar header__i" aria-hidden="true"></i>
+        <input class="  header__input" placeholder='Date' />
 
-      </input>
+        </input>
+      </div>
+      <div class="header__sfield1 ">
+        <i class="fas fa-scroll header__i" aria-hidden="true"></i>
+        <input class="  header__input" placeholder=' Insurence' />
 
-      <input class="header__p" placeholder='&#xf783   Date' />
-
-      </input>
-
-      <input class="header__p1" placeholder='&#xf70e   Insurence' />
-
-      </input>
+        </input>
+      </div>
       <button class="header__find">Find Doctor</button>
 
-    </form>
+    </section>
 
 
     <div class="header__img"></div>
@@ -74,7 +91,7 @@
         <p class="special__header text-left">
           Top specialists on <span class="special__cure">Cure</span><span class="special__dot">.</span>
         </p>
-        <p class="special__seeall text-right">See all specialists</p>
+        <a class="special__seeall text-right" href="">See all specialists</a>
       </div>
 
       <div class="special__card">
@@ -145,7 +162,8 @@
             <input placeholder="Enter your phone number" class="app__enter" />
             <input type="submit" value="Send link" class="app__send" />
           </form>
-          <img class="app__store" src="images/20-202991_get-it-on-google-play-logo-png-vector.png" />
+          <a href=""><img class="app__store" src="images/google last.png" /></a>
+          <a href=""><img class="app__store" src="images/app store last.png " /></a>
         </div>
       </div>
     </div>
@@ -251,65 +269,120 @@
           for doctors, hospitals and clinics im Kuwait and the middle east
         </li>
         <li class="">
-          <i class="fab fa-facebook footer__lighten"></i><i class="fab fa-instagram footer__lighten"></i>
+          <a href=""><i class="fab fa-facebook footer__lighten"></i></a><a href=""><i
+              class="fab fa-instagram footer__lighten"></i></a>
         </li>
-        <li class="footer__copyw">
-          <i class="far fa-copyright footer__cwi"></i> 2020 cure. All rights
-          reserved.
-        </li>
+        <a href="">
+          <li class="footer__copyw">
+            <i class="far fa-copyright footer__cwi"></i> 2020 cure. All rights
+            reserved.
+          </li>
+        </a>
       </ul>
     </div>
     <div class="footer__div">
       <p class="footer__header">Brands</p>
       <ul class="footer__ul">
-        <li class="footer__li">Home</li>
-        <li class="footer__li">About</li>
-        <li class="footer__li">Press</li>
-        <li class="footer__li">Careers</li>
-        <li class="footer__li">Contact</li>
-        <li class="footer__li">Help</li>
+        <a href="">
+          <li class="footer__li">Home</li>
+        </a>
+        <a href="">
+          <li class="footer__li">About</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Press</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Careers</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Contact</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Help</li>
+        </a>
       </ul>
     </div>
     <div class="footer__div">
       <p class="footer__header">Discover</p>
       <ul class="footer__ul">
-        <li class="footer__li">The Paper Gown </li>
-        <li class="footer__li">The Scripts</li>
+        <a href="">
+          <li class="footer__li">The Paper Gown </li>
+        </a>
+        <a href="">
+          <li class="footer__li">The Scripts</li>
+        </a>
 
       </ul>
     </div>
     <div class="footer__div">
       <p class="footer__header">Cities</p>
       <ul class="footer__ul">
-        <li class="footer__li">Atlanta</li>
-        <li class="footer__li">Chicago</li>
-        <li class="footer__li">Dinver</li>
-        <li class="footer__li">Houston</li>
-        <li class="footer__li">New York</li>
-        <li class="footer__li">Pheladelphia</li>
-        <li class="footer__li">phoenix</li>
-        <li class="footer__li">San Antonio</li>
-        <li class="footer__li">Washington DC</li>
+        <a href="">
+          <li class="footer__li">Atlanta</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Chicago</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Dinver</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Houston</li>
+        </a>
+        <a href="">
+          <li class="footer__li">New York</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Pheladelphia</li>
+        </a>
+        <a href="">
+          <li class="footer__li">phoenix</li>
+        </a>
+        <a href="">
+          <li class="footer__li">San Antonio</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Washington DC</li>
+        </a>
       </ul>
     </div>
     <div class="footer__div">
       <p class="footer__header">Specialities</p>
       <ul class="footer__ul">
-        <li class="footer__li">Chiropractors</li>
-        <li class="footer__li">Dentist</li>
-        <li class="footer__li">Dermatologists</li>
-        <li class="footer__li">Eye doctors</li>
-        <li class="footer__li">Gynecologists</li>
-        <li class="footer__li">Primary Care Doctors</li>
-        <li class="footer__li">Psycharities</li>
+        <a href="">
+          <li class="footer__li">Chiropractors</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Dentist</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Dermatologists</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Eye doctors</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Gynecologists</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Primary Care Doctors</li>
+        </a>
+        <a href="">
+          <li class="footer__li">Psycharities</li>
+        </a>
       </ul>
     </div>
     <div class="footer__div2">
       <p class="footer__header">Are you top Doctor or Dentist?</p>
       <ul class="footer__ul">
-        <li class="footer__li">List your practice on cure.</li>
+        <a href="">
+          <li class="footer__li">List your practice on cure.</li>
+        </a>
         <li class="footer__d2l">Download APPs on</li>
-        <li><img class="footer__img" src="images/Daco_1234510.png"></li>
+
+        <a href=""><img class="footer__img" src="images/google last.png" /></a>
+        <a href=""><img class="footer__img" src="images/app store last.png " /></a>
       </ul>
     </div>
     <div>

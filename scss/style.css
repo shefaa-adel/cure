@@ -19,15 +19,6 @@ body {
   font-weight: bold;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "AvenirNext-b";
-}
-
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,7 +136,7 @@ h6 {
 .nav__li {
   text-decoration: none;
   list-style: none;
-  color: #161c51;
+  color: #161c51 !important;
   font-size: 16px;
   font-family: "AvenirNext-b";
   font-size: 16px;
@@ -191,6 +182,7 @@ h6 {
     width: 100%;
     text-align: center;
     margin-left: 0px;
+    font-size: 15px;
   }
 }
 
@@ -394,9 +386,6 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-radius: 10px;
   position: absolute;
   z-index: 6;
@@ -411,6 +400,7 @@ h6 {
 @media screen and (max-width: 991px) {
   .header__search {
     border: 1px solid #e7e7e7;
+    font-size: 18px;
   }
 }
 
@@ -426,80 +416,130 @@ h6 {
   }
 }
 
+.header__sfield1 {
+  position: relative;
+  width: 25%;
+}
+
+.header__sfield1:not(:last-of-type) {
+  border-right: 1px solid #e7e7e7;
+}
+
+@media screen and (max-width: 767px) {
+  .header__sfield1 {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 15px;
+  }
+}
+
+.header__sfield {
+  position: relative;
+  width: 16.66667%;
+}
+
+.header__sfield:not(:last-of-type) {
+  border-right: 1px solid #e7e7e7;
+}
+
+@media screen and (max-width: 767px) {
+  .header__sfield {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 15px;
+  }
+}
+
+.header__i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #51637f;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .header__i {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__i {
+    margin-left: 15px;
+  }
+}
+
+.header__input {
+  display: block;
+  height: 60px;
+  width: 100%;
+  background: none;
+  outline: none !important;
+  border: none;
+  border-top: 4px solid rgba(7, 71, 166, 0);
+  border-bottom: 4px solid rgba(7, 71, 166, 0);
+  position: relative;
+  z-index: 1;
+  padding: 0 15px 0 45px;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+  font-size: 16px;
+  color: #51637f;
+  padding-left: 50px;
+}
+
+.header__input:focus {
+  border-color: rgba(7, 71, 166, 0.4);
+}
+
+.header__input::-webkit-input-placeholder {
+  color: #51637f;
+  font-size: 14px;
+}
+
+.header__input:-ms-input-placeholder {
+  color: #51637f;
+  font-size: 14px;
+}
+
+.header__input::-ms-input-placeholder {
+  color: #51637f;
+  font-size: 14px;
+}
+
+.header__input::placeholder {
+  color: #51637f;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+  .header__input {
+    font-size: 10px;
+    padding-left: 38px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__input {
+    font-size: 14px;
+    padding-left: 50px;
+  }
+}
+
 .header__first {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-left: 4px solid rgba(7, 71, 166, 0);
 }
 
 @media screen and (max-width: 767px) {
   .header__first {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
-  }
-}
-
-.header__p {
-  width: 16.66667%;
-  height: 100%;
-  padding: 10px;
-  text-align: left;
-  padding-left: 30px;
-  border: none;
-  font-family: "FontAwesome";
-  font-size: 18px;
-  color: #51637f !important;
-  border-right: 1px solid #e7e7e7;
-}
-
-@media screen and (max-width: 991px) {
-  .header__p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 320px) {
-  .header__p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header__p {
-    width: 100%;
-    border-bottom: 1px solid #e7e7e7;
-  }
-}
-
-.header__p1 {
-  color: #51637f !important;
-  width: 25%;
-  height: 100%;
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  text-align: left;
-  padding-left: 30px;
-  border-right: 1px solid #e7e7e7;
-  font-family: "FontAwesome";
-  border-right: 1px solid #e7e7e7;
-}
-
-@media screen and (max-width: 991px) {
-  .header__p1 {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 320px) {
-  .header__p1 {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header__p1 {
-    width: 100%;
-    border-bottom: 1px solid #e7e7e7;
+    border-right: 4px solid rgba(7, 71, 166, 0);
   }
 }
 
@@ -514,8 +554,17 @@ h6 {
   border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  outline: none;
   cursor: pointer;
   border-right: 1px solid #e7e7e7;
+}
+
+.header__find:hover {
+  background-color: #2e73db;
+}
+
+.header__find:active, .header__find:focus {
+  background-color: #134186;
 }
 
 @media screen and (max-width: 991px) {
@@ -641,9 +690,10 @@ h6 {
   display: inline-block;
   width: 50%;
   font-size: 18px;
-  color: #00B0D9;
+  color: #00B0D9 !important;
   font-weight: bold;
   line-height: 70px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -1028,20 +1078,22 @@ h6 {
 }
 
 .app__store {
-  width: 300px;
-  height: 75px;
+  width: 130px;
+  height: 40px;
+  margin-top: 15px;
 }
 
 @media screen and (max-width: 767px) {
   .app__store {
-    width: 210px;
-    height: 70px;
+    width: 100px;
+    height: 30px;
   }
 }
 
 @media screen and (max-width: 321px) {
   .app__store {
-    width: 274px;
+    width: 50%;
+    height: 40px;
   }
 }
 
@@ -1136,7 +1188,7 @@ h6 {
 
 @media screen and (max-width: 1024px) {
   .doctor5__num {
-    right: -80px;
+    right: -50px;
   }
 }
 
@@ -1221,6 +1273,12 @@ h6 {
   position: relative;
 }
 
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .patients {
+    height: 530px;
+  }
+}
+
 .patients__img {
   width: 50%;
   height: 100%;
@@ -1232,11 +1290,6 @@ h6 {
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .patients__img {
     top: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .patients__img {
     width: 100%;
     height: 30%;
     left: 0px;
@@ -1256,12 +1309,6 @@ h6 {
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .patients__data {
     padding-left: 50px;
-    margin-top: 30px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .patients__data {
     width: 100%;
     height: 70%;
     top: 25%;
@@ -1276,7 +1323,7 @@ h6 {
   font-family: "AvenirNext-b";
   color: #161c51;
   font-weight: bold;
-  width: 90%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1314,7 +1361,7 @@ h6 {
   font-size: 22px;
   font-weight: normal;
   color: #707E96;
-  width: 90%;
+  width: 100%;
 }
 
 @media screen and (max-width: 991px) {
@@ -1850,6 +1897,7 @@ h6 {
 .footer__copyw {
   margin-top: 20px;
   margin-left: 10px;
+  color: #707E96;
 }
 
 .footer__cwi {
@@ -1868,7 +1916,7 @@ h6 {
 
 @media screen and (max-width: 767px) {
   .footer__div {
-    display: none;
+    width: 33%;
   }
 }
 
@@ -1893,6 +1941,10 @@ h6 {
   }
 }
 
+.footer__li {
+  color: #707E96;
+}
+
 .footer__div2 {
   width: 150px;
   margin-left: 60px;
@@ -1910,9 +1962,9 @@ h6 {
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 320px) {
+@media screen and (max-width: 767px) {
   .footer__div2 {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -1925,14 +1977,15 @@ h6 {
 
 .footer__img {
   width: 130px;
-  height: 90px;
+  height: 40px;
   margin-top: 10px;
+  display: block;
 }
 
 @media screen and (max-width: 991px) {
   .footer__img {
-    height: 80px;
-    width: 110px;
+    height: 30px;
+    width: 100px;
   }
 }
 
